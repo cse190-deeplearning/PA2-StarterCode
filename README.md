@@ -1,4 +1,4 @@
-# Implememting Backpropagation
+# Implementing Backpropagation
 
 In this assignment, we will be implementing a configurable neural network in numpy. The starter code ```neuralnet_starter.py``` contains the abstractions of various componenets of a neural network including layers and activation functions. You will be implementing the the forward and backward passes of these components and combining them to create a complete neural network. You will also be implmenting the training procedure to train the neural network on MNIST classification and evaluating it. Feel free to create multiple copies of this starter code for different experiments. Just ensure that you also complete the file ```neuralnet_starter.py``` which will be autograded. We are providing a ```checker.py``` so that you may check the correctness of the functions you implement. You may run ```python checker.py``` at any point generate an evaluation report about the correctness of your implementation.
 
