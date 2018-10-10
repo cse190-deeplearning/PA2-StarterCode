@@ -1,5 +1,5 @@
 .DS_Store
-.pyc
+*.pyc
 data.pkl
 data2.pkl
 neuralnet.py
