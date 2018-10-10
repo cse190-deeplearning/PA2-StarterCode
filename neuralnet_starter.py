@@ -99,10 +99,8 @@ class Activation:
 class Layer():
   def __init__(self, in_units, out_units):
     np.random.seed(42)
-    self.vw = np.zeros((in_units,out_units))
-    self.vb = np.zeros((1,out_units))
     self.w = np.random.randn(in_units, out_units)  # Weight matrix
-    self.b = np.zeros((1,out_units)).astype(np.float32)  # Bias
+    self.b = np.zeros((1, out_units)).astype(np.float32)  # Bias
     self.x = None  # Save the input to forward_pass in this
     self.a = None  # Save the output of forward pass in this (without activation)
     self.d_x = None  # Save the gradient w.r.t x in this
@@ -116,7 +114,7 @@ class Layer():
     self.x = x
     return self.a
   
-  def backward_pass(self,delta):
+  def backward_pass(self, delta):
     """
     Write the code for backward pass. This takes in gradient from its next layer as input,
     computes gradient for its weights and the delta to pass to its previous layers.
@@ -129,6 +127,7 @@ class Neuralnetwork():
     self.layers = []
     self.x = None  # Save the input to forward_pass in this
     self.y = None  # Save the output vector of model in this
+    self.targets = None  # Save the targets in forward_pass in this variable
     for i in range(len(config['layer_specs']) - 1):
       self.layers.append( Layer(config['layer_specs'][i], config['layer_specs'][i+1]) )
       if i < len(config['layer_specs']) - 2:
