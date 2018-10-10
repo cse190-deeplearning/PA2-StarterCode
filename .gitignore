@@ -1,1 +1,8 @@
 .DS_Store
+.pyc
+data.pkl
+data2.pkl
+neuralnet.py
+neuralnet.pyc
+tester.py
+
