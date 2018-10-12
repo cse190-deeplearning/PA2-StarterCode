@@ -3,7 +3,7 @@ In this assignment, we will be implementing a configurable, Multi-Layer Perceptr
 
 
 ## Dataset
-We are providing the pickle files for train, validation and test splits in the ```data/``` directory. The data is in the form of ```n * 785``` NumPy array (in which the first 784 columns contain the flattend 28 * 28 MNIST image and the last column gives the class of image from 0 to 9. You need to implment the function ```load_data``` to return 2 arrays X, Y given a pickle file. X should be the input features and Y should be the one-hot encoded labels of each input image i.e ```shape(X) = n * 784``` and ```shape(Y) = n * 10```
+Unzip ```data.zip``` to get the pickle files for train, validation and test splits of MNIST dataset. The data is in the form of ```n * 785``` NumPy array (in which the first 784 columns contain the flattend 28 * 28 MNIST image and the last column gives the class of image from 0 to 9. All of the splits have been shuffled so you may skip the shuffling step. You need to implment the function ```load_data``` to return 2 arrays X, Y given a pickle file. X should be the input features and Y should be the one-hot encoded labels of each input image i.e ```shape(X) = n,784``` and ```shape(Y) = n,10```
 
 
 ## Activation Functions
