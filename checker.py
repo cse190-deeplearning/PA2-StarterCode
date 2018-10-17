@@ -1,10 +1,10 @@
-import neuralnet_starter as neuralnet
+import neuralnet
 import numpy as np
 import pickle
 
 def main():
     # make_pickle()
-    benchmark_data = pickle.load(open('validate_data.pkl'))
+    benchmark_data = pickle.load(open('validate_data.pkl', 'rb'), encoding='latin1')
 
     config = {}
     config['layer_specs'] = [784, 100, 100, 10]  # The length of list denotes number of hidden layers; each element denotes number of neurons in that layer; first element is the size of input layer, last element is the size of output layer.
@@ -36,7 +36,7 @@ def main():
     err_ReLU = np.sum(np.abs(benchmark_data['out_ReLU'] - out_ReLU))
     check_error(err_ReLU, "ReLU Forward Pass")
 
-    print "**************"
+    print("**************")
 
     grad_sigmoid = act_sigmoid.backward_pass(1.0)
     err_sigmoid_grad = np.sum(np.abs(benchmark_data['grad_sigmoid'] - grad_sigmoid))
